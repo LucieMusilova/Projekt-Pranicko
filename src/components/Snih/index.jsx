@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Snih = ({data}) => {
+const Snih = ({data, getChoice}) => {
   return (
       	
     <div className="field">
@@ -10,7 +10,7 @@ const Snih = ({data}) => {
 
                 {data.map((d, index) =>
                   <div className="field__radio" key={index}>
-                    <input type="radio" name="snow" id={`snow-${d.value}`}/>
+                    <input type="radio" name="snow" id={`snow-${d.value}`} onClick={() => getChoice("snow", d.value)}/>
                     <label htmlFor={`snow-${d.value}`}>{d.description}</label>
                   </div>
                 )}

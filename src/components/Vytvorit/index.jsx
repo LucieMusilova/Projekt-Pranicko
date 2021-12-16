@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+
 import Pozadi from "../Pozadi";
 import Barva from "../Barva";
 import Obrazek from "../Obrazek";
@@ -8,7 +9,9 @@ import Text from "../Text";
 import Odesilatel from "../Odesilatel";
 import Button from "../Button";
 
-const Vytvorit = ({data}) => {
+const Vytvorit = ({data, getChoice}) => {
+ 
+  
   return (
     <>
       <header className="header">
@@ -23,14 +26,14 @@ const Vytvorit = ({data}) => {
 
 					<form className="configurator">
 
-						<Pozadi data={data.backgrounds}/>
-						<Barva data={data.colors}/>
-            <Obrazek data={data.covers}/>
-            <Snih data={data.snow}/>
-				    <Hudba data={data.music}/>
-            <Text/>
-            <Odesilatel/>
-            <Button/>
+						<Pozadi data={data.backgrounds} getChoice={getChoice}/>
+						<Barva data={data.colors} getChoice={getChoice}/>
+            <Obrazek data={data.covers} getChoice={getChoice}/>
+            <Snih data={data.snow} getChoice={getChoice}/>
+				    <Hudba data={data.music} getChoice={getChoice}/>
+            <Text getChoice={getChoice}/>
+            <Odesilatel getChoice={getChoice}/>
+            <Button />
 
 					</form>
 

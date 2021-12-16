@@ -1,8 +1,7 @@
 import React from 'react';
 
-const Pozadi = ({data}) => {
+const Pozadi = ({data, getChoice}) => {
 
-  console.log(data)
   return (
       	
     <div className="field">
@@ -10,8 +9,8 @@ const Pozadi = ({data}) => {
 
     <div className="field__swatch-group field__swatch-group--round">
       {data.map((d, index) =>
-        <div className="field__swatch" key={index}>
-          <input type="radio" name="background" id={`background-${d.value}`}/>
+        <div className="field__swatch" key={index} onClick={() => getChoice("background", d.value)}>
+          <input type="radio"  name="background" id={`background-${d.value}`} />
           <label htmlFor={`background--${d.value}`} className={`swatch--${d.value}`} data-description={d.description}></label>
         </div>
       )}
