@@ -6,11 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import config from "./configuration";
 
-import Header from "./components/Header";
 import Uvod from "./components/Uvod";
 import Vytvorit from "./components/Vytvorit";
 import Vyzvednout from "./components/Vyzvednout";
 import Hotovo from "./components/Hotovo";
+import Pranicko from "./components/Pranicko";
 
 const App = () => {
   const [myConfig, setMyConfig] = useState({});
@@ -37,13 +37,10 @@ const App = () => {
     fetchData();
   }, [myConfig]);
 
-  console.log(myConfig);
-  console.log(final);
+  
 
   return (
     <BrowserRouter>
-      <Header />
-
       <Routes>
         <Route path="/" element={<Uvod />} />
         <Route path="/vyzvednout" element={<Vyzvednout />} />
@@ -52,6 +49,7 @@ const App = () => {
           element={<Vytvorit data={config} getChoice={getChoice}/>}
         />
         <Route path="/vytvorit/hotovo" element={<Hotovo final={final}/>} />
+        <Route path="/pranicko/:id" element={<Pranicko />} />
       </Routes>
     </BrowserRouter>
   );

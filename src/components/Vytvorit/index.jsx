@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Header from "../Header";
 import Pozadi from "../Pozadi";
 import Barva from "../Barva";
 import Obrazek from "../Obrazek";
@@ -14,6 +15,8 @@ const Vytvorit = ({data, getChoice}) => {
   
   return (
     <>
+    <Header />
+    
       <header className="header">
 			<h1 className="header__title">Vytvořit přáníčko</h1>
 		</header>

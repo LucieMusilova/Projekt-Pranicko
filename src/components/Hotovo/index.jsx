@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import Header from "../Header";
+
 const Hotovo = ({ final }) => {
   if (final === null) {
     return <p>Načítám údaje.</p>;
@@ -11,15 +13,18 @@ const Hotovo = ({ final }) => {
   if (final !== null && final.success === true) {
 
     return (
+    <>
+      <Header />
       <main className="content">
         <div className="pickup">
           <p className="pickup__label">Přímý odkaz na přáníčko</p>
 
           <div className="box shadow mb-30">
             <div className="box__inside pt-0 pb-0">
-              <a href="https://tvuj-web.cz/card/abc123" className="pickup__url">
-                https://tvuj-web.cz/card/abc123
-              </a>
+              <Link to={`/pranicko/${final?.data.id}`} className="pickup__url">
+                XXXDOPLNIT.netlify.app/pranicko/{final.data.id}
+              </Link>
+
               <p className="pickup__description">
                 Tento odkaz pošli emailem, přes messenger nebo ho dej na
                 sociální sítě. Po kliknutí na odkaz se zobrazí tvoje přáníčko.
@@ -31,7 +36,7 @@ const Hotovo = ({ final }) => {
 
           <div className="box shadow mb-30">
             <div className="box__inside pt-0 pb-0">
-              <div className="pickup__code">{final.data.id}</div>
+              <div className="pickup__code">{final?.data.id}</div>
               <p className="pickup__description">
                 S tímto kódem si kdokoliv může vyzvednout tvoje uložené
                 přáníčko. Hodí se, když chceš přáníčko poslat třeba SMSkou a
@@ -46,9 +51,10 @@ const Hotovo = ({ final }) => {
             </button>
           </Link>
         </div>
-      </main>
-    );
-    }
+      </main> 
+    </>
+   ); 
+  };
 };
 
 export default Hotovo;

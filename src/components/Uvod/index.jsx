@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Header from "../Header";
+
 const Uvod = () => {
   return (
     <>
+      <Header />
+
       <div className="header">
         <h1 className="header__title">Vánoční přáníčko</h1>
       </div>
