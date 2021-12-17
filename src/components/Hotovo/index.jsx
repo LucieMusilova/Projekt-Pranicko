@@ -22,7 +22,7 @@ const Hotovo = ({ final }) => {
           <div className="box shadow mb-30">
             <div className="box__inside pt-0 pb-0">
               <Link to={`/pranicko/${final?.data.id}`} className="pickup__url">
-                XXXDOPLNIT.netlify.app/pranicko/{final.data.id}
+              stastne-a-vesele.netlify.app/pranicko/{final.data.id}
               </Link>
 
               <p className="pickup__description">

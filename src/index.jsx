@@ -10,7 +10,7 @@ import Uvod from "./components/Uvod";
 import Vytvorit from "./components/Vytvorit";
 import Vyzvednout from "./components/Vyzvednout";
 import Hotovo from "./components/Hotovo";
-import Pranicko from "./components/Pranicko";
+import Data from "./components/Data";
 
 const App = () => {
   const [myConfig, setMyConfig] = useState({});
@@ -49,7 +49,7 @@ const App = () => {
           element={<Vytvorit data={config} getChoice={getChoice}/>}
         />
         <Route path="/vytvorit/hotovo" element={<Hotovo final={final}/>} />
-        <Route path="/pranicko/:id" element={<Pranicko />} />
+        <Route path="/pranicko/:id" element={<Data />} />
       </Routes>
     </BrowserRouter>
   );
