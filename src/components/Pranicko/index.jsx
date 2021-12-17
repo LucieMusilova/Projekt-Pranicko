@@ -6,7 +6,7 @@ const Pranicko = ({card}) => {
 
   const [open, setOpen] = useState(false);
  
-const [isPlaying, play, pause] = useAudio(`../../assets/audio/${card?.music}`);
+const [isPlaying, play, pause] = useAudio(`../../assets/audio/${card?.music}.mp3`);
 
   const handlePlayClick = () => {
     setOpen(!open);
