@@ -32,7 +32,6 @@ const [isPlaying, play, pause] = useAudio(`../../assets/audio/${card?.music}.mp3
           <div className="inside-left__text">{card.text}</div>
           <div className="inside-left__sender">{card.sender}</div>
         </div>
-        <img className="inside-left__logo" src="../../assets/images/czechitas.svg" alt="Czechitas"/>
       </div>
 
       <div className="inside-right">
